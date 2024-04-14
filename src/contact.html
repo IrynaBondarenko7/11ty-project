@@ -4,13 +4,19 @@ title: Contact Page
 description: "the contact page description only"
 ---
 
-<h1>{{title}}</h1>
-<a href="{{ '/' | url}}">Back to home</a>
+<body class="bg-lime-200">
+  <h1 class="text-blue-400">{{title}}</h1>
 
-<div class="my-class">
-  <img
-    src="{{'/assets/images/welcome.png' |url}}"
-    alt="welcome img"
-    width="300px"
-  />
-</div>
+  <div class="flex flex-col gap-6">
+    <a
+      href="{{ '/' | url}}"
+      class="text-red-500 hover:text-red-700 transition-all duration-300"
+      >Back to home</a
+    >
+    <img
+      src="{{'/assets/images/welcome.png' |url}}"
+      alt="welcome img"
+      width="300px"
+    />
+  </div>
+</body>

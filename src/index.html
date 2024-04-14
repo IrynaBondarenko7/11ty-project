@@ -3,14 +3,20 @@ layout: layouts/home.html
 title: "Menkov web site"
 ---
 
-<h1>{{title}}</h1>
-<p>Some text main page</p>
-<div class="my-class">
-  <a href="{{ '/contact' | url}}">Go To The Contact Page</a>
+<body class="bg-slate-200">
+  <h1 class="text-green-500 text-center text-2xl">{{title}}</h1>
+  <p>Some text main page</p>
+  <div class="flex flex-col gap-6">
+    <a
+      href="{{ '/contact' | url}}"
+      class="text-red-500 hover:text-red-700 transition-all duration-300"
+      >Go To The Contact Page</a
+    >
 
-  <img
-    src="{{'/assets/images/welcome.png' |url}}"
-    alt="welcome img"
-    width="300px"
-  />
-</div>
+    <img
+      src="{{'/assets/images/welcome.png' |url}}"
+      alt="welcome img"
+      width="300px"
+    />
+  </div>
+</body>
