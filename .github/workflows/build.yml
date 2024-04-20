@@ -18,14 +18,11 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build Eleventy
-        run: npm run build
-
-      - name: Build Tailwind CSS
-        run: npm run build:css
+      - name: Install dependencies & build
+        run: |
+          npm install
+          npm run build
+          npm run build:css
 
       - name: Copy output.css to _site directory
         run: cp src/css/output.css _site/css/
