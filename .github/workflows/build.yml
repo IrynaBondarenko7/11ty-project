@@ -21,20 +21,14 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-     
-
       - name: Build Eleventy
         run: npm run build
 
       - name: Build Tailwind CSS
         run: npm run build:css
 
-     - name: Remove git ignore
-     - run: find .src/css/output.css -name ".gitignore" -delete
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./_site
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
