@@ -1,9 +1,7 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/");
-  eleventyConfig.addPassthroughCopy("resources/css/");
   eleventyConfig.addPassthroughCopy("src/css/");
   eleventyConfig.addPassthroughCopy({ "public/favicon": "/" });
-  eleventyConfig.addWatchTarget("resources/css/");
 
   return {
     dir: {
