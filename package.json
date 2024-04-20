@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all -p eleventy tailwind",
-    "eleventy": "npx eleventy --serve",
-    "tailwind": "npx tailwindcss -i ./resources/css/global.css -o ./src/css/output.css --watch",
-    "build": "npx @11ty/eleventy",
+    "start": "npm-run-all -p serve:eleventy serve:tailwind",
+    "serve:eleventy": "npx eleventy --serve",
+    "serve:tailwind": "npm run build:css && npx tailwindcss -i ./resources/css/global.css -o ./src/css/output.css --watch",
+    "build": "npm run build:eleventy",
+    "build:eleventy": "npx @11ty/eleventy",
     "build:css": "npx tailwindcss -i ./resources/css/global.css -o ./src/css/output.css"
   },
   "keywords": [],
