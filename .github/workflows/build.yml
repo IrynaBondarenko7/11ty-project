@@ -21,7 +21,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - run: find ./_site -name ".gitignore" -delete
+      - run: find .src/css/output.css -name ".gitignore" -delete
 
       - name: Build Eleventy
         run: npm run build
