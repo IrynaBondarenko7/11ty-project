@@ -21,13 +21,15 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - run: find .src/css/output.css -name ".gitignore" -delete
+     
 
       - name: Build Eleventy
         run: npm run build
 
       - name: Build Tailwind CSS
         run: npm run build:css
+      
+     - run: find .src/css/output.css -name ".gitignore" -delete
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
