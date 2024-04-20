@@ -28,16 +28,13 @@ jobs:
         run: npm run build:css
 
       - name: Add output.css to staging area
-        run: git add src/css/output.css
+        run: git add -f src/css/output.css
 
       - name: Commit changes
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git commit -m "Include output.css in build"
-
-      - name: Add output.css to staging area
-        run: git add -f src/css/output.css
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
