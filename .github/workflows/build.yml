@@ -28,7 +28,8 @@ jobs:
 
       - name: Build Tailwind CSS
         run: npm run build:css
-      
+
+     - name: Remove git ignore
      - run: find .src/css/output.css -name ".gitignore" -delete
 
       - name: Deploy to GitHub Pages
@@ -36,4 +37,4 @@ jobs:
         with:
           publish_dir: ./_site
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          exclude_assets: ".github,**/.gitignore"
+
